@@ -15,7 +15,7 @@ public class ListaPrendasViewModel : INotifyPropertyChanged
 
     public ListaPrendasViewModel()
     {
-        _database = App.Current.Services.GetService<PrendaDatabase>();
+        _database = App.Database;
         CargarCommand = new Command(async () => await Cargar());
         _ = Cargar(); // carga automática al iniciar
     }

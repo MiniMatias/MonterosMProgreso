@@ -15,7 +15,7 @@ namespace MonterosMProgreso.ViewModels
         private readonly PrendaDatabase _database;
         public AgregarPrendaViewModel()
         {
-            _database = App.Current.Services.GetService<PrendaDatabase>();
+            _database = App.Database;
             GuardarCommand = new Command(async () => await Guardar());
         }
         private async Task Guardar()
