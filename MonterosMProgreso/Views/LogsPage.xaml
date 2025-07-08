@@ -1,0 +1,19 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:vm="clr-namespace:InventarioRopa_Monteros.ViewModels"
+          x:Class="InventarioRopa_Monteros.Views.LogsPage"
+          Title="Historial de Logs">
+    <ContentPage.BindingContext>
+        <vm:LogsViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+        <CollectionView ItemsSource="{Binding Registros}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding}" Padding="5" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

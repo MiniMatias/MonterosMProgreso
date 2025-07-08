@@ -1,0 +1,28 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:InventarioRopa_Monteros.ViewModels"
+             x:Class="InventarioRopa_Monteros.Views.ListaPrendasPage"
+             Title="Listado de Prendas">
+    <ContentPage.BindingContext>
+        <vm:ListaPrendasViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+        <CollectionView ItemsSource="{Binding Prendas}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Gray" Margin="5" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Nombre}" FontAttributes="Bold" />
+                            <Label Text="{Binding Color}" />
+                            <Label Text="Talla: {Binding Talla}" />
+                            <Label Text="{Binding EnInventario, StringFormat='En Inventario: {0}'}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>
+    
+   
