@@ -27,6 +27,6 @@ public class ListaPrendasViewModel : INotifyPropertyChanged
         foreach (var prenda in lista)
             Prendas.Add(prenda);
     }
-
+    
     public event PropertyChangedEventHandler PropertyChanged;
 }

@@ -1,4 +1,6 @@
-<TabBar>
+xmnls="http://schemas.microsoft.com/dotnet/2021/maui"
+xmnls:views="clr-namespace:MonterosMProgreso.Views"
+    <TabBar>
     <Tab Title="Agregar">
         <ShellContent
  ContentTemplate="{DataTemplate local:AgregarPrendaPage}" />
